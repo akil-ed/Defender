@@ -71,7 +71,9 @@ public class OrbitCamera : MonoBehaviour
     public KeyCode zoomOutKey = KeyCode.F;
     public float zoomSpeed = 5f;
     private float zoomVelocity;
-
+	void Awake(){
+		Application.targetFrameRate = 60;
+	}
     private void Start()
     {
 		SetTouchParameters ();
@@ -253,9 +255,9 @@ public class OrbitCamera : MonoBehaviour
 			keyboardControl = false;
 			TouchControl = true;
 			//invertZoomValue *= -1;
-			zoomSpeed = zoomSpeed / 30;
-			xSpeed = xSpeed / 30;
-			ySpeed = ySpeed / 30;
+			zoomSpeed = zoomSpeed / 50;
+			xSpeed = xSpeed / 70;
+			ySpeed = ySpeed / 70;
 		}
 	}
 
